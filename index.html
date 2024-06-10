@@ -1,0 +1,64 @@
+<!-- Project Name: TIC TAC TOE -->
+<!-- Description: This project illustrates a simple TIC TAC TOE game -->
+<!-- Author Name: Shreya Gupta -->
+<!-- Date Created: 02-June-2024 -->
+<!-- Last Updated: 10-June-2024 -->
+<!-- Contact: shreya320gupta@gmail.com -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the external CSS file for styling -->
+    <link href="index.css" rel="stylesheet">
+
+    <!-- Link to Google Fonts for Aclonica and Alata fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alata&display=swap" rel="stylesheet">
+
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <!-- Background image -->
+    <div class="image">
+        <img src="final.png" alt="Responsive Image">
+    </div>
+    
+    <!-- Circular element for design -->
+    <div class="circle"></div>
+    
+    <!-- Triangle element for the play button -->
+    <div class="triangle" onclick="shrinkAndNavigate(event, 'tic-tac-toe-player1.html')"></div>
+
+    <!-- Heading of the page using Aclonica font -->
+    <div class="font">TIC TAC TOE</div>
+
+    <!-- Buttons for selecting the number of players -->
+    <a href="tic-tac-toe-player1.html" class="player" id="one">1 Player</a>
+    <a href="tic-tac-toe-player2.html" class="player" id="two">2 Players</a>
+
+    <!-- JavaScript code for the shrinkAndNavigate function -->
+    <script>
+        // Function to shrink a triangle element and navigate to a new URL
+        function shrinkAndNavigate(event, url) {
+            // Prevent the default behavior of the event
+            event.preventDefault();
+            
+            // Select the triangle element on the page
+            var triangle = document.querySelector(".triangle");
+            
+            // Add the "shrink" class to the triangle element to make it smaller
+            triangle.classList.add("shrink");
+            
+            // Set a timer to navigate to the new URL after a delay of 300 milliseconds (0.3 seconds)
+            setTimeout(function() {
+                window.location.href = url;
+            }, 300);
+        }
+    </script> 
+</body>
+</html>

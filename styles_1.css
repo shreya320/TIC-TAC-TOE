@@ -1,0 +1,154 @@
+/* Styling for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #432818;
+}
+
+/* Styling for the left image */
+.image1 {
+    width: 18rem;
+    height: 100%;
+    float: left;
+    position: absolute;
+    left: 0px;
+}
+
+/* Styling for the right image */
+.image2 {
+    width: 18rem;
+    height: 100%;
+    float: left;
+    position: absolute;
+    right: 0px;
+}
+
+/* Styling for the game title */
+.font {
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+    background: linear-gradient(to bottom, #e1a663, #bc8d65);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    font-size: 30px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Styling for the game status message */
+#gameStatus {
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding: 5px;
+    color: #FFE6A7;
+    text-transform: uppercase;
+    border: 1px dashed #fcf0d3; 
+    animation: moveOutline 2s linear infinite;
+    text-align: center;
+}
+
+/* Animation for the game status message */
+@keyframes moveOutline {
+    0% {
+        box-shadow: inset 0 0 0 0px #fcf0d3;
+    }
+    50% {
+        box-shadow: inset 0 0 0 3px #fcf0d3;
+    }
+    100% {
+        box-shadow: inset 0 0 0 0px #fcf0d3;
+    }
+}
+
+/* Styling for the game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 13px;
+    position: relative;
+}
+
+/* Styling for each cell in the game board */
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFE6A7;
+    font-weight: bolder;
+    color: #6F1D1B;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-shadow: 2px 3px rgb(0, 0, 0);
+    box-shadow: 0.5px 1px 5px rgba(252, 216, 143, 0.4);
+}
+
+/* Hover effect for the cells */
+.cell:hover {
+    background-color: #fcf0d3;
+}
+
+/* Styling for the current player indicator */
+#currentPlayer {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #FFE6A7;
+}
+
+/* Styling for the reset button */
+#resetButton {
+    margin-top: 20px;
+    margin-left: 90px; /* Added margin-left to center the button */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FFE6A7;
+    color: #6F1D1B;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;   
+}
+
+/* Styling for the winning line indicator */
+.winning-line {
+    position: absolute;
+    height: 10px;
+    background-color: black;
+    transform-origin: left center;
+    border-radius: 10px;
+    display: none;
+    opacity: 0.7;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotated line */
+}
+
+/* Styling for the choose buttons */
+.choose{
+    padding: 5px 10px;
+    margin: 5px;
+    color:#6F1D1B;
+    background-color: #f1c197;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 3px 3px #FFE6A7;
+}
+
+/* Hover effect for the choose buttons */
+.choose:hover{
+    padding: 7px 12px;
+    background-color: #fee8b6;
+    box-shadow: none;
+}
